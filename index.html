@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <title>Lexus NX Banner</title>
+
+    <style>
+		html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+		.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* Global */
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html {	
+			font-size: 125%;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: regular;
+			text-rendering: optimizeLegibility;
+			text-transform: uppercase;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.flexProperties {
+			display: flex;
+			height: 15vh;
+			width: 80vw;
+			border: 1px solid black;
+		}
+		
+/* Left Side*/
+		.graphics {
+			width: 50%;
+			background-image: url(./images/iris.jpg);
+			background-size: cover;
+			background-position: left top;			
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		.blackLexusLogo {
+			width: 20%;
+			position: relative;
+			left: 0;
+			opacity: 0;
+			height: 80%;
+		}
+
+		.blackLexusLogo img {
+			object-fit: scale-down;
+			height: 100%;
+		}
+
+		.lexusNX {
+			width: 60%;
+			height: 120%;
+			margin: 0 auto;
+			position: relative;
+			opacity: 0;
+		}
+
+		.lexusNX img {
+			object-fit: scale-down;
+			height: 100%;
+		}
+
+/* Right Side */
+		.text {
+			width: 50%;
+			display: flex;
+			justify-content: space-between;
+			padding-right: 1rem;
+		}
+
+		.lexusModel {
+			font-size: .8rem;
+		}
+
+		.dealInfo {
+			width: 40%;
+			position: relative;
+			top: 10px;
+			right: 40px;			
+			opacity: 0;
+		}
+
+		.lexusModel {
+			margin-bottom: 4px;
+		}
+
+		.lexusModel span {
+			font-weight: bold;
+		}
+		
+		.deliveryCredits {
+			border-top: 2px solid black;
+		}
+
+		.price::before {
+			content: "$";
+			font-size: 1rem;
+			position: relative;
+			top: -8px;
+			left: auto;
+			font-weight: normal;
+		}
+
+		.price {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+
+		.price::after {
+			content: "^";
+			font-size: 1rem;
+			position: relative;
+			top: -8px;
+			left: auto;
+			font-weight: normal;
+		}
+
+		.moreInfo {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: flex-end;
+			width: 30%;
+		}
+
+		.horizontalLexusLogo {
+			position: relative;
+			opacity: 0;
+		}
+
+		.learnBtn {
+			font-size: .6rem;
+			text-align: center;
+			background-color: red;
+			color: white;
+			font-weight: bold;
+			padding: .1rem .5rem;
+			width: 6rem;
+			position: relative;
+			opacity: 0;
+		}
+
+		.learnBtn a:hover,
+		.learnBtn a:active {
+			color:white;
+		}
+
+		.disclaimer {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: black;
+			width: 300px;
+			height: 250px;
+			padding: 10px 15px;
+			/* font-size: 11px; */
+			/* z-index: 200; */
+			color: white;
+			overflow: auto;
+			opacity: 0;
+			display: none;
+		}
+		
+		.disclaimerBtn {
+			color: grey;
+			font-size: .5rem;
+			position: relative;
+			opacity: 0;
+		}
+
+		.disclaimerBtn a:hover,
+		.disclaimerBtn a:active {
+			color:grey;
+		}
+
+
+
+		
+    </style>
+
+    
+</head>
+<body>
+
+	<!-- HTML starts here -->
+	<div class="flexProperties">
+
+		<!-- Left Side -->
+        <div class="graphics">
+
+			<div class="blackLexusLogo"><img src="./images/lexusLogo.jpeg" alt="Lexus Logo"></div>
+			<div class="lexusNX"><img src="./images/lexusNXCar.png" alt="A white Lexus NX vehicle"></div>
+		</div>
+
+		<!-- Right Side -->
+		<div class="text">
+			
+			<div class="dealInfo">
+				<p class="lexusModel">2019 <span>NX 300 AWD</span></p>
+				<div class="deliveryCredits"><img src="./images/deliveryCreditsText.png" alt="Receive delivery credits of up to"></div>
+				<p class="price">x,xxx</p>
+			</div>
+			
+			<div class="moreInfo">
+				<div class="horizontalLexusLogo">
+					<img src="./images/lexusLogoTransparent.gif" alt="Another Lexus Logo">
+				</div>
+				
+				<a href="#" class="learnBtn">Learn more</a>
+				<a href="#" class="disclaimerBtn">Disclaimer</a>			
+			</div>			
+
+		</div>
+	</div>
+	
+	<div id="disclaimerOpenBtn" class="disclaimer">
+		<span id="disclaimerCloseBtn">X</span>
+		<h3>Disclaimer</h3>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure quaerat laboriosam voluptas quae impedit ut mollitia, iusto sequi perspiciatis repellendus? Modi veniam nesciunt ab tenetur debitis quod excepturi voluptas quisquam?</p>
+	</div>
+
+	<!-- JavaScript starts here -->
+
+	<!-- [IF] platform == DoubleClick Studio (DCRM) || DoubleClick Manager (DCM) || DoubleClick Bid Manager (DBM) -->
+	<script type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+
+
+	<!-- GSAP - TimelineMax v1.19 -->
+	<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+
+    <script>
+ 
+		
+
+		// ===========================
+		// NOTES to the developer
+		// ===========================
+
+		// A lot of what I wrote here is based largely on the sample that was provided and what I could get from the documenation from the GSAP library.
+		// Essentially, I had everything fade in at the same time but I wanted to show (at the least) what I learned which was the .to method.
+		// I learned enough to know how to target via class names, the timing and what you wanted to do (autoAlpha to help with visibility)
+
+		// It does not work and I ran out of time.
+		// However, I know that the error involves timing of the elements being loaded.  As the elements have not fully loaded due to the fade effect (among other things) this portion is unable to get the element ID.
+
+		// I also noticed that this particular challenge did not come with any resources.  I had to find / create the images for me to work with based on the rules that were given.
+		// I DID email back and ask about this but never got a reply.
+
+
+		window.onload = function () {
+			TweenMax.to('.blackLexusLogo', 2, {autoAlpha:1, ease:Power1.easeOut});
+			TweenMax.to('.lexusNX', 2, {autoAlpha:1, ease:Power1.easeOut});
+			TweenMax.to('.dealInfo', 2, {autoAlpha:1, ease:Power1.easeOut});
+			TweenMax.to('.horizontalLexusLogo', 2, {autoAlpha:1, ease:Power1.easeOut});
+			TweenMax.to('.learnBtn', 2, {autoAlpha:1, ease:Power1.easeOut});
+			TweenMax.to('.disclaimerBtn', 2, {autoAlpha:1, ease:Power1.easeOut});
+		}
+
+		
+	    // Disclaimer Pop Up    
+		
+		// Show
+		let disclaimerShow = function() {
+			// tl.pause();
+			TweenLite.set('.disclaimer', {display: "block"});
+			TweenLite.fromTo('.disclaimer', 0.5, {opacity: 0}, {opacity: 1});
+		}
+
+		
+		// Hide
+		let disclaimerHide = function() {
+			TweenLite.fromTo('.disclaimer', 0.5, {opacity: 1}, {opacity: 0});
+			TweenLite.set('.disclaimer', {display: "none"});
+	    }
+
+		// I know that the error involves timing of the elements being loaded.  As the elements have not fully loaded due to the fade effect (among other things) this portion is unable to get the element ID.
+		document.getElementById(disclaimerOpenBtn).addEventListener('click', disclaimerShow);
+	    document.getElementById(disclaimerCloseBtn).addEventListener('click', disclaimerHide);
+		
+	</script>
+    
+</body>
+</html>
+
